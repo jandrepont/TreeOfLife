@@ -22,6 +22,6 @@ https://treeoflife.cfapps.io/
 
 |Table | Method | Endpoint | Description | 
 |---------------|:------------------:|-----|---------|
-| Creatures | GET<br>POST<br>PUT<br>DELETE |`/creatures`<br>`/creatures/{species}`<br>`/creatures/post`<br>`/creatures/{id}`<br>`/creatures/{id}`| get all creatures<br>get creature by species<br>Post new creature<br>update a creature<br>delete a creature by id | 
-|Taxonomy| GET<br>POST<br>PUT<br>DELETE |`taxonomy`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}` | get all taxonomies<br>get full taxonomy by species<br> Post new taxonomy for a species<br> Update a taxonomy/correct<br> delete a taxonomy |
+| Creatures | GET<br>GET<br>POST<br>PUT<br>DELETE |`/creatures`<br>`/creatures/{species}`<br>`/creatures/post`<br>`/creatures/{id}`<br>`/creatures/{id}`| get all creatures<br>get creature by species<br>Post new creature<br>update a creature<br>delete a creature by id | 
+|Taxonomy| GET<br>GET<br>POST<br>PUT<br>DELETE |`taxonomy`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}`<br>`taxonomy/{genus species}` | get all taxonomies<br>get full taxonomy by species<br> Post new taxonomy for a species<br> Update a taxonomy/correct<br> delete a taxonomy |
 
