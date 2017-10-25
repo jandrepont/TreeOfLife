@@ -1,16 +1,10 @@
 package com.tol.TreeOfLife.Service;
 
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.tol.TreeOfLife.Model.Creature;
 import com.tol.TreeOfLife.Repository.CreatureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +25,19 @@ public class CreatureService {
         return creatureRepository.getBySpecies(species);
     }
 
+
+    //TODO: check to see if the creature does not exist in DB
     public Boolean addCreature(Creature creature){
         creatureRepository.save(creature);
         return true;
     }
 
+    //TODO: safety check to make sure the creature.getID() already exists in the database
+    public void updateCreature(Creature creature) {
+        creatureRepository.save(creature);
+    }
+
+    public void deleteCreature(Long id){
+        creatureRepository.delete(id);
+    }
 }

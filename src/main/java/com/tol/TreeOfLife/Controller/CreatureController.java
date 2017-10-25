@@ -2,17 +2,11 @@ package com.tol.TreeOfLife.Controller;
 
 
 import com.tol.TreeOfLife.Model.Creature;
-import com.tol.TreeOfLife.Repository.CreatureRepository;
 import com.tol.TreeOfLife.Service.CreatureService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static sun.misc.Version.println;
 
 
 @RestController
@@ -21,9 +15,6 @@ public class CreatureController {
 
     @Autowired
     private CreatureService creatureService;
-
-    @Autowired
-    private CreatureRepository creatureRepository;
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Creature>  getAllCreatures(){
@@ -48,5 +39,21 @@ public class CreatureController {
 
         return String.valueOf(creature);
     }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
+    public void updateCreature(@RequestBody Creature creature) throws Exception{
+        try {
+            creatureService.updateCreature(creature);
+        } catch(Exception e){
+            throw new Exception(e.getCause().getCause().getMessage());
+        }
+
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
+    public void deleteCreature(@PathVariable("id") Long id){
+        creatureService.deleteCreature(id);
+    }
+
 
 }
