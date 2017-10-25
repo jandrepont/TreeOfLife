@@ -6,10 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @EnableJpaRepositories
-@Table(name = "table")
+@Table(name = "taxonomy")
 public class Taxonomy {
 
-    @Id
     @Column(name = "domain")
     private String domain;
 
@@ -20,16 +19,17 @@ public class Taxonomy {
     private String phylum;
 
     @Column(name = "class_")
-    private float class_;
+    private String class_;
 
-    @Column(name = "order")
-    private String order;
+    @Column(name = "order_")
+    private String order_;
 
     @Column(name = "family")
-    private float family;
+    private String family;
 
-    @Column(name = "genus_species")
-    private float genus_species;
+    @Id
+    @Column(name = "genus_species", nullable = false)
+    private String genus_species;
 
     public String getDomain() {
         return domain;
@@ -55,35 +55,35 @@ public class Taxonomy {
         this.phylum = phylum;
     }
 
-    public float getClass_() {
+    public String getClass_() {
         return class_;
     }
 
-    public void setClass_(float class_) {
+    public void setClass_(String class_) {
         this.class_ = class_;
     }
 
-    public String getOrder() {
-        return order;
+    public String getOrder_() {
+        return order_;
     }
 
-    public void setOrder(String order) {
-        this.order = order;
+    public void setOrder_(String order_) {
+        this.order_ = order_;
     }
 
-    public float getFamily() {
+    public String getFamily() {
         return family;
     }
 
-    public void setFamily(float family) {
+    public void setFamily(String family) {
         this.family = family;
     }
 
-    public float getGenus_species() {
+    public String getGenus_species() {
         return genus_species;
     }
 
-    public void setGenus_species(float genus_species) {
+    public void setGenus_species(String genus_species) {
         this.genus_species = genus_species;
     }
 }
