@@ -13,7 +13,7 @@ Back end server for a catalog of all life on earth (prototype for learning Sprin
 ### Design (v2) 
    * could split the tables based on classes, such as mammals, maxillopoda, etc. 
    * This might be slower but may save on memory 
-   * Would also allow for more dynamic models based on database tables
+   * Would also allow for more dynamic models(classes) based on database tables
    
    
 ## REST Endpoints (haven't implemented all of taxonomy)
