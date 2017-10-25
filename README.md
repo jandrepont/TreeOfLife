@@ -18,6 +18,8 @@ Back end server for a catalog of all life on earth (prototype for learning Sprin
    
 ## REST Endpoints (haven't implemented all of taxonomy)
 
+https://treeoflife.cfapps.io/
+
 |Table | Method | Endpoint | Description | 
 |---------------|:------------------:|-----|---------|
 | Creatures | GET<br>POST<br>PUT<br>DELETE |`/creatures`<br>`/creatures/{species}`<br>`/creatures/post`<br>`/creatures/{id}`<br>`/creatures/{id}`| get all creatures<br>get creature by species<br>Post new creature<br>update a creature<br>delete a creature by id | 
